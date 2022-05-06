@@ -1,0 +1,23 @@
+// Avi Patel 
+// May 5, 2022
+// Description: Implementation of computing the power of a number using iteration and recursion 
+
+
+CBON()
+SET(R1,2) // base
+SET(R2,3) // exponent
+CALL(FP_alt, power_iter)
+
+HALT()
+
+// computes the power of a
+LABEL(power_iter)
+
+    SET(R3,1)
+    LABEL(top)
+    DEC(R2,1)
+    MUL(R3, R3, R1)
+    print_reg(R3)
+    CMP(R2, R0)
+    BG(top)
+    RETURN(FP_alt, PC_ret)
